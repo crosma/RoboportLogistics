@@ -1,11 +1,45 @@
-data:extend(
+data:extend({
 {
+	type = "item-subgroup",
+	name = "virtual-signal-sensor",
+	group = "signals",
+	order = "z"
+},
+{
+    type = "virtual-signal",
+	name = "home-lrobots",
+	icon = "__RoboportLogistics__/graphics/lbot-rdy.png",
+	subgroup = "virtual-signal-sensor",
+	order = "z[sensor-a]",
+},
+{
+    type = "virtual-signal",
+	name = "home-crobots",
+	icon = "__RoboportLogistics__/graphics/cbot-rdy.png",
+	subgroup = "virtual-signal-sensor",
+	order = "z[sensor-a]",
+},
+{
+    type = "virtual-signal",
+	name = "all-lrobots",
+	icon = "__RoboportLogistics__/graphics/lbot-all.png",
+	subgroup = "virtual-signal-sensor",
+	order = "z[sensor-a]",
+},
+{
+    type = "virtual-signal",
+	name = "all-crobots",
+	icon = "__RoboportLogistics__/graphics/cbot-all.png",
+	subgroup = "virtual-signal-sensor",
+	order = "z[sensor-a]",
+},
+
   {
     type = "constant-combinator", --decider-combinator
     name = "roboport-output-proxy",
-	icon = "__RoboportLogistics__/graphics/sensor_icon.png",
+	icon = "__base__/graphics/entity/smart-chest/smart-chest.png",
 	--flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "directional-sensor"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "constant-combinator"},
 	selectable_in_game = false,
 	--collision_mask = {"ghost-layer"},
 

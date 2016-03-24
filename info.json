@@ -1,8 +1,8 @@
 {
   "name": "RoboportLogistics",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "title": "RoboportLogistics",
-  "author": "Matt Crossley",
+  "author": "enkindle",
   "homepage": "",
   "dependencies": ["base"],
   "description": "Makes the Roboport wire itself to smart inserters automagically."
