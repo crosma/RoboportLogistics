@@ -65,13 +65,13 @@ function on_tick(event)
 				end
 
 				if data.network ~= nil then
-					parameters[i] = {signal = {type = "virtual", name = "home-lrobots"}, count = network.available_logistic_robots, index = i}
+					parameters[i] = {signal = {type = "virtual", name = "home-lrobots"}, count = data.network.available_logistic_robots, index = i}
 					i = i + 1
-					parameters[i] = {signal = {type = "virtual", name = "home-crobots"}, count = network.available_construction_robots, index = i}
+					parameters[i] = {signal = {type = "virtual", name = "home-crobots"}, count = data.network.available_construction_robots, index = i}
 					i = i + 1
-					parameters[i] = {signal = {type = "virtual", name = "all-lrobots"}, count = network.all_logistic_robots, index = i}
+					parameters[i] = {signal = {type = "virtual", name = "all-lrobots"}, count = data.network.all_logistic_robots, index = i}
 					i = i + 1
-					parameters[i] = {signal = {type = "virtual", name = "all-crobots"}, count = network.all_construction_robots, index = i}
+					parameters[i] = {signal = {type = "virtual", name = "all-crobots"}, count = data.network.all_construction_robots, index = i}
 					i = i + 1
 				end
 
@@ -196,7 +196,7 @@ end
 
 function update_data_network(data)
 	data.force = data.roboport.force
-	network = data.roboport.force.find_logistic_network_by_position(data.roboport.position, data.roboport.surface)
+	data.network = data.roboport.force.find_logistic_network_by_position(data.roboport.position, data.roboport.surface)
 end
 
 function get_roboport_data_and_remove(roboport)
